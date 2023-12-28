@@ -1,0 +1,20 @@
+
+<div class=" block w-full">
+
+  <shared-title title="Capital" />
+
+
+  <shared-search-box 
+        (newTag)="newTag($event)" 
+        [tag]="capitalTag()" 
+        placeholder="Buscar por Capital"/>  
+
+  @if ( isLoading ) {
+    <shared-loading-spinner />
+  } @else {
+    <country-table [countriesList]="capitalList()"/>
+  }
+
+  
+
+</div>

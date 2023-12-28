@@ -1,0 +1,19 @@
+<div class=" block w-full">
+
+  <shared-title title="País" />
+
+
+  <shared-search-box 
+      (newTag)="newTag($event)"
+      placeholder="Buscar por País"
+      [tag]="countriesTag()"/>  
+
+  @if (isLoading) {
+    <shared-loading-spinner/>
+  }@else {
+    <country-table [countriesList]="countriesList()"/>
+  }
+
+</div>
+
+

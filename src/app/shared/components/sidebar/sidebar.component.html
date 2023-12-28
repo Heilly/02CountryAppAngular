@@ -1,0 +1,21 @@
+<div class="flex flex-col text-left py-5 rounded-lg border-gray-200 bg-gray-100 uppercase tracking-wider  ">
+    <h3 class="block font-sans text-center text-xl font-semibold leading-tight tracking-normal text-inherit antialiased">
+        Buscar por ...
+    </h3>
+</div>
+<!-- Items -->
+<div class="p-4 space-y-4  border-gray-100 bg-gray-50 ">
+    <!-- Inicio -->
+    @for (item of menuItems; track $index) {
+        <a [routerLink]="[item.path]" 
+            routerLinkActive="space-x-4 rounded-lg text-white bg-gradient-to-r from-sky-600 to-cyan-400"
+            [routerLinkActiveOptions]="{exact:true}"
+            class="py-3 flex items-center rounded-md">
+            <i class="fas fa-wallet"></i>
+            <span>{{ item.title }}</span>
+        </a>
+    }
+    
+</div>
+
+
